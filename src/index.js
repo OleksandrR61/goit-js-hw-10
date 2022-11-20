@@ -30,14 +30,12 @@ function onSearch({target: {value}}) {
     .then(res => {
         if (res.status === 404) {
             throw new Error("Oops, there is no country with that name")
-        } else if (!res.ok) {
-            throw new Error(response.statusText)
         };
         return res.json()})
     .then(data => showCountries(data))
-    .catch(message => {
+    .catch(error => {
         cleanMarkup();
-        Notify.failure(`${message}`.substring(7))
+        Notify.failure(error.message);
     });
 }
 
