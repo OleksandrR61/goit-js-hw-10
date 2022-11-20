@@ -13,6 +13,8 @@ countryListRef.style.listStyleType = "none";
 countryListRef.style.padding = "0"
 countryListRef.style.margin = "0"
 
+cleanMarkup();
+
 inputRef.addEventListener("input", debounce(onSearch, DEBOUNCE_DELAY));
 
 function getRef(selector) {
