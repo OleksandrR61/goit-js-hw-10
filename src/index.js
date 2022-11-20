@@ -10,10 +10,10 @@ let countryListRef = getRef(".country-list");
 let countryInfoRef = getRef(".country-info");
 
 countryListRef.style.listStyleType = "none";
-countryListRef.style.padding = "0"
-countryListRef.style.margin = "0"
+countryListRef.style.padding = "0";
+countryListRef.style.margin = "0";
 
-cleanMarkup();
+inputRef.value = "";
 
 inputRef.addEventListener("input", debounce(onSearch, DEBOUNCE_DELAY));
 
