@@ -29,11 +29,6 @@ function onSearch({target: {value}}) {
     }
 
     fetchCountries(value)
-    .then(res => {
-        if (res.status === 404) {
-            throw new Error("Oops, there is no country with that name")
-        };
-        return res.json()})
     .then(data => showCountries(data))
     .catch(error => {
         cleanMarkup();
