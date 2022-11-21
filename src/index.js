@@ -65,10 +65,10 @@ function showResult(data) {
     let markup = "";
     if (data.length) {
         let {flags: {svg: flag}, name: {official: name}, capital, population, languages} = data[0];
-        markup = `<img src="${flag}" width="50" style="display:inline-block;"/><b style="font-size:45px;"> ${name}</b></br>
-        <b>Capital:</b> ${capital}</br>
-        <b>Population:</b> ${population}</br>
-        <b>Languages:</b> ${Object.values(languages).join(", ")}`;        
+        markup = `<p><img src="${flag}" width="50" style="display:inline-block;"/><b style="font-size:45px;"> ${name}</b></p>
+        <p><b>Capital:</b> ${capital}</p>
+        <p><b>Population:</b> ${population}</p>
+        <p><b>Languages:</b> ${Object.values(languages).join(", ")}</p>`;        
     }
     countryInfoRef.innerHTML = markup;
 }
